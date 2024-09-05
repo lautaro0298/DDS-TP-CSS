@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctico CSS</title>
+    <style>
+        /* --- Cabecera --- */
+        p {
+            font-size: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+
+        blockquote {
+            font-size: 18px;
+            text-align: right;
+            font-style: italic;
+            border-left: 5px solid #ccc;
+            padding-left: 10px;
+        }
+
+        /* --- Propiedades de Caja --- */
+        .caja1, .caja2 {
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #000;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .caja2 {
+            border: 4px solid #f00;
+            background-color: #ffe;
+        }
+
+        /* --- Posición Relativa y Absoluta --- */
+        .relativo {
+            position: relative;
+            top: 10px;
+            left: 20px;
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 50px; /* Margen para evitar solapamiento */
+        }
+
+        .absoluto {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: lightcoral;
+            padding: 5px;
+        }
+
+        /* --- Media Queries --- */
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            section {
+                width: 90%;
+                padding: 5px;
+            }
+        }
+
+        /* --- Grid --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .grid-item {
+            background-color: lightgray;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* --- Animaciones --- */
+        @keyframes mover {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+        }
+
+        .mover {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            animation: mover 3s infinite;
+        }
+
+        .animacion {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: background-color 0.5s;
+        }
+
+        .animacion:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Práctico CSS - Desarrollo de Software</h1>
+    </header>
+
+    <!-- Cabecera -->
+    <section>
+        <p>Este es un párrafo de ejemplo para la cabecera.</p>
+        <blockquote>Esta es una cita dentro de un blockquote.</blockquote>
+    </section>
+
+    <!-- Propiedades de Caja -->
+    <section>
+        <div class="caja1">Caja 1</div>
+        <div class="caja2">Caja 2</div>
+    </section>
+
+    <!-- Posición Relativa y Absoluta -->
+    <section>
+        <div class="relativo">
+            Contenedor Relativo
+            <div class="absoluto">Contenido Absoluto</div>
+        </div>
+    </section>
+
+    <!-- Grid -->
+    <section class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+    </section>
+
+    <!-- Animaciones -->
+    <section>
+        <div class="animacion">Cuadro Animado</div>
+        <div class="mover"></div>
+    </section>
+
+</body>
+</html>
